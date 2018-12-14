@@ -1,5 +1,5 @@
 library(dplyr)
-all<-read.table("FPKM_Col_Cordycepin_0_to 8h.txt",header = T)
+all<-read.table("FPKM_Col_Cordycepin_0_to_8h.txt",header = T)
 all[,2:ncol(all)]<-all[,2:ncol(all)]+0.0001
 #set comparation time points with 0h
 t<-as.data.frame(c(0.5,1,2,4,8))
