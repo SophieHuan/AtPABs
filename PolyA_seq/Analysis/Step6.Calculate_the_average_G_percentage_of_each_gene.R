@@ -54,5 +54,6 @@ data2$average_G_content<-data2$G_count_sum/data2$polyA_length_sum
 # This discards genes with less than 3 poly(A) tail reads
 data2<-data2[data2$polyA_readsnum>=3,]
 data2<-data2[!is.na(data2$gene),]
-data2<-data2[c(2:7,9,13)]
+data2<-data2[c(2,3,7,9,13)]
+data2<-rename(data2,
 write.table(data2,"Col_1_mapping_polyA_G_information_readscut3_Ginfor.txt",sep="\t",row.names = F,quote = F)
